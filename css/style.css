@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --primary-color: #6b6b6b;
+  --dark-color: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  height: 44px;
+  width: 145px;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Navbar */
+.navbar {
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: rgb(43, 43, 43);
+  padding: 10px;
+  font-weight: bold;
+}
+
+.navbar li a:hover {
+    border-bottom: 2px #4c8930 solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* Showcase */
+.showcase {
+  height: 100%;
+  position: relative;
+}
+
+.showcase-image {
+  position: relative;
+}
+
+.banner {
+  filter: brightness(60%);
+  max-width: 100%;
+  height: auto;
+  animation: fadeInAnimation ease 3s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: fowards; 
+}
+
+.showcase-text {
+  position: relative;
+  text-align: center;
+  color: rgb(22, 22, 22);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-text h1 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-text-stroke: 0.8px rgb(255, 255, 255);
+}
+
+.showcase h2 {
+  font-size: 30px;
+}
+
+.showcase p {
+  margin: 10px 0;
+}
+
+/* Stats */
+.stats {
+  padding-top: 50px;
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.stats i {
+  color: #4c8930;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* References */
+.references .flex {
+  flex-wrap: wrap;
+}
+
+.references .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.references .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.references .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Newsletter */
+.newsletter .flex {
+  flex-wrap: wrap;
+}
+
+.form-control {
+  padding-bottom: 24px;
+}
+
+/* Footer */
+.footer .social a {
+  margin: 0 10px;
+}
+
+/* Animations */
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Tablets and under */
+@media (max-width: 650px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+  }
+
+  .showcase-text h1 { 
+    font-size: 30px; 
+ }
+
+ .banner {
+     height: 180px;
+ }
+}

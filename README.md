@@ -1,0 +1,1 @@
+Coding Challenge for #LianaTechnologies. Challenge revolves around developing a webpage based on given example and showing basic development skills with HTML, CSS, etc.
